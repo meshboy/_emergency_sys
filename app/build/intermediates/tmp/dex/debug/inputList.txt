@@ -1,0 +1,5 @@
+/root/AndroidStudioProjects/Emergency/app/build/intermediates/classes/debug
+/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-77286b450018c765668e673a0baa91c48ed88e84.jar
+/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-84aa765945b9a5b3b6d8127a8e1d16bf87ee08eb.jar
+/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/classes-d9501dfd275db6b7a072f9501a8b0a97acf8213d.jar
+/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/classes-41d8c454e326650a1675ead0cd4044424efb44bd.jar
