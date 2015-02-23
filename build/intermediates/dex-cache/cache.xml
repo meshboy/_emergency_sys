@@ -2,18 +2,39 @@
 <items version="2" >
 
     <item
-        jar="/root/AndroidStudioProjects/Emergency/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/classes-41d8c454e326650a1675ead0cd4044424efb44bd.jar" />
-    </item>
-    <item
         jar="/root/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
         <dex dex="/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-77286b450018c765668e673a0baa91c48ed88e84.jar" />
+    </item>
+    <item
+        jar="/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/pre-dexed/debug/classes-96d9f14a80fc742cd18ce533fb8705d33d22bbbd.jar" />
+    </item>
+    <item
+        jar="/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/pre-dexed/debug/classes-40334c7b0198dba953357c94770f5f43293d4465.jar" />
+    </item>
+    <item
+        jar="/root/AndroidStudioProjects/Emergency/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/classes-d9501dfd275db6b7a072f9501a8b0a97acf8213d.jar" />
+    </item>
+    <item
+        jar="/root/AndroidStudioProjects/Emergency/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/classes-41d8c454e326650a1675ead0cd4044424efb44bd.jar" />
     </item>
     <item
         jar="/root/AndroidStudioProjects/Emergency/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
@@ -23,11 +44,11 @@
         <dex dex="/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-84aa765945b9a5b3b6d8127a8e1d16bf87ee08eb.jar" />
     </item>
     <item
-        jar="/root/AndroidStudioProjects/Emergency/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/root/AndroidStudioProjects/Emergency/app/build/intermediates/pre-dexed/debug/classes-d9501dfd275db6b7a072f9501a8b0a97acf8213d.jar" />
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-32aee1c8af14a081317df3291888841512a9ced8.jar" />
     </item>
 
 </items>

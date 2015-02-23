@@ -34,11 +34,11 @@ public class edit_contact extends ActionBarActivity implements View.OnClickListe
 
         save = (Button) findViewById(R.id.contact_save);
         delete = (Button) findViewById(R.id.contact_del);
-        exit = (Button) findViewById(R.id.contact_exit);
+
 
         save.setOnClickListener(this);
         delete.setOnClickListener(this);
-        exit.setOnClickListener(this);
+
 
 
         contact_id =0;
@@ -105,11 +105,11 @@ public class edit_contact extends ActionBarActivity implements View.OnClickListe
 
         }
 
-        else if (v.getId() == (R.id.contact_exit))
-        {
-//            Intent intent = new Intent(this, select_action.class);
-//            startActivity(intent);
-        }
+//        else if (v.getId() == (R.id.contact_exit))
+//        {
+////            Intent intent = new Intent(this, select_action.class);
+////            startActivity(intent);
+//        }
 
 
     }

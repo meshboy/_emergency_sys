@@ -18,4 +18,4 @@
         android:textSize="22sp"
         android:textStyle="bold"
         android:id="@+id/contact_name" />
-</LinearLayout><!-- From: file:/root/AndroidStudioProjects/Emergency/app/src/main/res/layout/view_contacts_entry.xml -->
+</LinearLayout><!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/src/main/res/layout/view_contacts_entry.xml -->
