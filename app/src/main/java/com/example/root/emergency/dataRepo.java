@@ -54,23 +54,23 @@ public class dataRepo
      *
      */
 
-    public int insertMedHistory (medical_history med_hist)
+    public int insertMedHistory (med_hist med_hist)
     {
         //open db
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         ContentValues values = new ContentValues();
 
-        values.put(medical_history.allergy, med_hist.med_allergy);
-        values.put(medical_history.bloodGrp, med_hist.med_bloodGrp);
-        values.put(medical_history.condtion, med_hist.med_condition);
-        values.put(medical_history.diabetic, med_hist.med_diabetic);
-        values.put(medical_history.insurance, med_hist.med_insurance);
-        values.put(medical_history.medication, med_hist.med_medication);
-        values.put(medical_history.nationality, med_hist.med_nationality);
-        values.put(medical_history.name, med_hist.med_name);
+        values.put(com.example.root.emergency.med_hist.allergy, med_hist.med_allergy);
+        values.put(com.example.root.emergency.med_hist.bloodGrp, med_hist.med_bloodGrp);
+        values.put(com.example.root.emergency.med_hist.condtion, med_hist.med_condition);
+        values.put(com.example.root.emergency.med_hist.diabetic, med_hist.med_diabetic);
+        values.put(com.example.root.emergency.med_hist.insurance, med_hist.med_insurance);
+        values.put(com.example.root.emergency.med_hist.medication, med_hist.med_medication);
+        values.put(com.example.root.emergency.med_hist.nationality, med_hist.med_nationality);
+        values.put(com.example.root.emergency.med_hist.name, med_hist.med_name);
 
-        long med_id = db.insert(medical_history.Medical_table, null, values);
+        long med_id = db.insert(com.example.root.emergency.med_hist.Medical_table, null, values);
         db.close();
 
         return (int) med_id;
@@ -97,7 +97,7 @@ public class dataRepo
     public void deleteMed (int med_id)
     {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        db.delete(medical_history.Medical_table, medical_history.id + "=?", new String[] {String.valueOf(med_id)});
+        db.delete(med_hist.Medical_table, med_hist.id + "=?", new String[] {String.valueOf(med_id)});
 
     }
 
@@ -129,23 +129,23 @@ public class dataRepo
      * update medical history
      */
 
-    public void updateMed(medical_history med_hist)
+    public void updateMed(med_hist med_hist)
     {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         ContentValues values = new ContentValues();
 
-        values.put(medical_history.allergy, med_hist.med_allergy);
-        values.put(medical_history.bloodGrp, med_hist.med_bloodGrp);
-        values.put(medical_history.condtion, med_hist.med_condition);
-        values.put(medical_history.diabetic, med_hist.med_diabetic);
-        values.put(medical_history.insurance, med_hist.med_insurance);
-        values.put(medical_history.medication, med_hist.med_medication);
-        values.put(medical_history.nationality, med_hist.med_nationality);
-        values.put(medical_history.name, med_hist.med_name);
+        values.put(com.example.root.emergency.med_hist.allergy, med_hist.med_allergy);
+        values.put(com.example.root.emergency.med_hist.bloodGrp, med_hist.med_bloodGrp);
+        values.put(com.example.root.emergency.med_hist.condtion, med_hist.med_condition);
+        values.put(com.example.root.emergency.med_hist.diabetic, med_hist.med_diabetic);
+        values.put(com.example.root.emergency.med_hist.insurance, med_hist.med_insurance);
+        values.put(com.example.root.emergency.med_hist.medication, med_hist.med_medication);
+        values.put(com.example.root.emergency.med_hist.nationality, med_hist.med_nationality);
+        values.put(com.example.root.emergency.med_hist.name, med_hist.med_name);
 
-        db.update(medical_history.Medical_table, values,
-                medical_history.id + "= ?", new String[] {String.valueOf(med_hist.med_id)});
+        db.update(com.example.root.emergency.med_hist.Medical_table, values,
+                com.example.root.emergency.med_hist.id + "= ?", new String[] {String.valueOf(med_hist.med_id)});
 
         db.close();
 
@@ -218,41 +218,41 @@ public class dataRepo
 
 
 
-    public medical_history getHistoryId (int id)
+    public med_hist getHistoryId (int id)
     {
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
 
         String sql = "SELECT " +
-                      medical_history.name + ", " +
-                      medical_history.nationality + ", " +
-                      medical_history.allergy + "," +
-                      medical_history.bloodGrp + ", " +
-                      medical_history.diabetic + ", " +
-                      medical_history.condtion + ", " +
-                      medical_history.insurance + ", "+
-                      medical_history.medication + ", " +
-                      " FROM "  + medical_history.Medical_table +
-                      " WHERE " +medical_history.id + "=?";
+                      med_hist.name + ", " +
+                      med_hist.nationality + ", " +
+                      med_hist.allergy + "," +
+                      med_hist.bloodGrp + ", " +
+                      med_hist.diabetic + ", " +
+                      med_hist.condtion + ", " +
+                      med_hist.insurance + ", "+
+                      med_hist.medication + ", " +
+                      " FROM "  + med_hist.Medical_table +
+                      " WHERE " + med_hist.id + "=?";
 
 
-        medical_history med = new medical_history();
+        med_hist med = new med_hist();
 
         Cursor cursor = db.rawQuery(sql, new String[] {String.valueOf(id)});
 
         if(cursor.moveToFirst())
         {
             do{
-                med.med_id = cursor.getInt(cursor.getColumnIndex(medical_history.id));
-                med.med_name = cursor.getString(cursor.getColumnIndex(medical_history.name));
-                med.med_nationality =  cursor.getString(cursor.getColumnIndex(medical_history.nationality));
-                med.med_allergy = cursor.getString(cursor.getColumnIndex(medical_history.allergy));
-                med.med_bloodGrp= cursor.getString(cursor.getColumnIndex(medical_history.bloodGrp));
-                med.med_diabetic = cursor.getString(cursor.getColumnIndex(medical_history.diabetic));
-                med.med_condition  = cursor.getString(cursor.getColumnIndex(medical_history.condtion));
-                med.med_insurance = cursor.getString(cursor.getColumnIndex(medical_history.insurance));
-                med.med_medication = cursor.getString(cursor.getColumnIndex(medical_history.medication));
+                med.med_id = cursor.getInt(cursor.getColumnIndex(med_hist.id));
+                med.med_name = cursor.getString(cursor.getColumnIndex(med_hist.name));
+                med.med_nationality =  cursor.getString(cursor.getColumnIndex(med_hist.nationality));
+                med.med_allergy = cursor.getString(cursor.getColumnIndex(med_hist.allergy));
+                med.med_bloodGrp= cursor.getString(cursor.getColumnIndex(med_hist.bloodGrp));
+                med.med_diabetic = cursor.getString(cursor.getColumnIndex(med_hist.diabetic));
+                med.med_condition  = cursor.getString(cursor.getColumnIndex(med_hist.condtion));
+                med.med_insurance = cursor.getString(cursor.getColumnIndex(med_hist.insurance));
+                med.med_medication = cursor.getString(cursor.getColumnIndex(med_hist.medication));
 
             }while (cursor.moveToNext());
 

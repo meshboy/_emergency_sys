@@ -25,7 +25,7 @@
     <!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="black">#000100</color>
-    <color name="blue">#6600CC</color>
+    <color name="blue">#ff1b0eab</color>
     <!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -40,6 +40,11 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="dred">#FFCD0511</color>
+    <!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
@@ -62,6 +67,7 @@
     <!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="red">#ee0000</color>
+    <color name="red1">#fffb180c</color>
     <!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="ripple_material_dark">#40ffffff</color>

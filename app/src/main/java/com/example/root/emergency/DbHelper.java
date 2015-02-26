@@ -40,15 +40,15 @@ public class DbHelper extends SQLiteOpenHelper
 
 
 
-        String create_medHistory ="CREATE TABLE " + medical_history.Medical_table+ "(" +
+        String create_medHistory ="CREATE TABLE " + med_hist.Medical_table+ "(" +
 
-                         medical_history.id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                         medical_history.name + " TEXT, " +
-                         medical_history.allergy + "  TEXT, " +
-                         medical_history.bloodGrp + " TEXT, " +
-                         medical_history.diabetic + " TEXT, " +
-                         medical_history.insurance +  " TEXT, " +
-                         medical_history.medication + " TEXT )";
+                         med_hist.id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                         med_hist.name + " TEXT, " +
+                         med_hist.allergy + "  TEXT, " +
+                         med_hist.bloodGrp + " TEXT, " +
+                         med_hist.diabetic + " TEXT, " +
+                         med_hist.insurance +  " TEXT, " +
+                         med_hist.medication + " TEXT )";
 
 
         db.execSQL(create_contact);
@@ -60,7 +60,7 @@ public class DbHelper extends SQLiteOpenHelper
 
 //        //if db exists before drop
         db.execSQL("DROP TABLE IF EXITS "  + contactProfile.contact_TABLE);
-        db.execSQL("DROP TABLE IF EXITS " + medical_history.Medical_table);
+        db.execSQL("DROP TABLE IF EXITS " + med_hist.Medical_table);
 //
 //        //re-create table
 //        onCreate(db);

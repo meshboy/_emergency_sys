@@ -7,24 +7,30 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-    private ImageButton start;
+//    private ImageButton start;
+    private TextView start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        start = (ImageButton) findViewById(R.id.start_button);
+//        start = (ImageButton) findViewById(R.id.start_button);
 
-        start.setOnClickListener(MainActivity.this);
+//        start.setOnClickListener(MainActivity.this);
+
+
+        start = (TextView) findViewById(R.id.start);
+        start.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.start_button)
+        if (v.getId() == R.id.start)
         {
             Intent intent = new Intent(MainActivity.this, com.example.root.emergency.select_action.class);
             startActivity(intent);

@@ -35,6 +35,7 @@
         android:layout_height="wrap_content"
         android:text="Ambulance"
         android:background="@color/yellow"
+        android:drawableLeft="@drawable/yellowcall"
         android:layout_gravity="center"
         android:id="@+id/ambulance"
         />
@@ -44,9 +45,10 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Fire"
+        android:drawableLeft="@drawable/red"
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
-        android:background="@color/red"
+        android:background="@color/red1"
         android:id="@+id/Fire"
         />
 
@@ -58,6 +60,8 @@
         android:layout_gravity="center"
         android:background="@color/blue"
         android:layout_marginBottom="20dp"
+
+        android:drawableLeft="@drawable/blue"
         android:id="@+id/Police"
         />
 
