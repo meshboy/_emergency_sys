@@ -26,10 +26,22 @@
             android:name="com.example.root.emergency.select_action"
             android:label="@string/app_name" />
         <activity
+            android:name="com.example.root.emergency.emergency_service"
+            android:label="@string/app_name" />
+        <activity
             android:name="com.example.root.emergency.edit_contact"
             android:label="@string/app_name" />
         <activity
             android:name="com.example.root.emergency.list_contact"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.example.root.emergency.ambulance"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.example.root.emergency.fire"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.example.root.emergency.police"
             android:label="@string/app_name" />
     </application>
 

@@ -47,18 +47,19 @@ public class select_action extends ActionBarActivity implements View.OnClickList
 
         }
 
-//        if(v.getId() == R.id.service)
-//        {
-//
-//        }
-//        if(v.getId() == R.id.history)
-//        {
-//
-//        }
-//        if(v.getId() == R.id.run)
-//        {
-//
-//        }
+        if(v.getId() == R.id.service)
+        {
+            Intent intent = new Intent(this, com.example.root.emergency.emergency_service.class);
+            startActivity(intent);
+        }
+        if(v.getId() == R.id.history)
+        {
+
+        }
+        if(v.getId() == R.id.run)
+        {
+
+        }
 
     }
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Emergency Services"
+            android:id="@+id/textView12" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/emer2"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Ambulance"
+        android:background="@color/yellow"
+        android:layout_gravity="center"
+        android:id="@+id/ambulance"
+        />
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Fire"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:background="@color/red"
+        android:id="@+id/Fire"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Police"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:background="@color/blue"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/Police"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="@string/emergency"
+        android:id="@+id/textView14" />
+
+
+
+
+</LinearLayout><!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/src/main/res/layout/emergency_services.xml -->
