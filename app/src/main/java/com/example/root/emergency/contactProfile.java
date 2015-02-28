@@ -6,15 +6,15 @@ package com.example.root.emergency;
 public class contactProfile
 {
     //contact table name
-    public static String contact_TABLE ="Contacts";
+    public static String contact_TABLE ="emerg_contact";
 
 
 
     //column names
-    public static String KEY_ID ="id";
-    public static String KEY_NAME ="name";
-    public static String KEY_EMAIL ="email";
-    public static String KEY_PHONE ="phone";
+    public static String KEY_ID ="contact_id";
+    public static String KEY_NAME ="contact_name";
+    public static String KEY_EMAIL ="contact_email";
+    public static String KEY_PHONE ="contact_phone";
 
 
     //property that keeps data

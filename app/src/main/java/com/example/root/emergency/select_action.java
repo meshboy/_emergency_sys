@@ -54,6 +54,8 @@ public class select_action extends ActionBarActivity implements View.OnClickList
         }
         if(v.getId() == R.id.history)
         {
+            Intent intent = new Intent(this, medical_history.class);
+            startActivity(intent);
 
         }
         if(v.getId() == R.id.run)

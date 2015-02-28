@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
     android:background="@color/white"
     >
+
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
         <TextView
@@ -16,7 +15,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="30dp"
-            android:text="Edit Profile"
+            android:text="Edit Medical History"
             android:gravity="center"
             android:textColor="@color/white"
             android:background="@color/black"
@@ -24,18 +23,21 @@
             android:id="@+id/textView10" />
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:layout_gravity="right"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2" >
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-
-
+            android:layout_height="fill_parent">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -51,7 +53,7 @@
                     android:textColorHint="@color/red"
                     android:hint="Enter Name"
                     android:ems="10"
-                    android:id="@+id/editText" />
+                    android:id="@+id/med_name" />
             </LinearLayout>
 
             <LinearLayout
@@ -70,7 +72,7 @@
                     android:id="@+id/textView5" />
 
                 <RadioGroup
-                    android:id="@+id/nation_group"
+                    android:id="@+id/nationgrp_med"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp">
@@ -81,7 +83,8 @@
                         android:orientation="horizontal"
 
                         android:text="Nigeria"
-                        android:id="@+id/nig_button" />
+                        android:id="@+id/naija"
+                        android:checked="true"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -90,7 +93,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="-32dp"
-                        android:id="@+id/other_button"
+                        android:id="@+id/other"
 
                         />
                 </RadioGroup>
@@ -108,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Enter Allergy"
                     android:textColorHint="@color/red"
-                    android:id="@+id/editText2" />
+                    android:id="@+id/allergy" />
             </LinearLayout>
 
             <LinearLayout
@@ -123,7 +126,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Enter Blood Group"
                     android:textColorHint="@color/red"
-                    android:id="@+id/editText3" />
+                    android:id="@+id/bldgrp" />
             </LinearLayout>
 
             <LinearLayout
@@ -159,6 +162,7 @@
                         android:text="No"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="-32dp"
+                        android:checked="true"
                         android:id="@+id/dia_no"
 
                         />
@@ -177,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Specify Medical Condition"
                     android:textColorHint="@color/red"
-                    android:id="@+id/editText4" />
+                    android:id="@+id/med_con" />
             </LinearLayout>
 
             <LinearLayout
@@ -205,7 +209,7 @@
                         android:orientation="horizontal"
 
                         android:text="Yes"
-                        android:id="@+id/med_yes" />
+                        android:id="@+id/yesIn" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -213,7 +217,8 @@
                         android:text="No"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="-32dp"
-                        android:id="@+id/med_no"
+                        android:checked="true"
+                        android:id="@+id/noIn"
 
                         />
                 </RadioGroup>
@@ -251,6 +256,7 @@
                         android:text="No"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="-32dp"
+                        android:checked="true"
                         android:id="@+id/medon_no"
 
                         />
@@ -268,12 +274,20 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Save profile"
-                    android:id="@+id/save_profile" />
+                    android:text="Save "
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/med_save" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:id="@+id/med_delete" />
             </LinearLayout>
 
         </LinearLayout>
-
     </ScrollView>
+
 
 </LinearLayout><!-- From: file:/root/AndroidStudioProjects/_emergency_sys/app/src/main/res/layout/edit_med_history.xml -->

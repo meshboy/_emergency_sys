@@ -6,20 +6,20 @@ package com.example.root.emergency;
 public class med_hist
 {
     //table name
-    public static String Medical_table = "Med_table";
+    public static String Medical_table = "medical_table";
 
 
     //column names
 
     public static String id = "id";
-    public static String name ="name";
-    public static String nationality = "nationality";
-    public static String allergy = "allergy";
-    public static String bloodGrp = "bloodGroup";
-    public static String diabetic = "diabetic";
-    public static String condtion = "condition";
-    public static String insurance = "insurance";
-    public static String medication = "medication";
+    public static String name ="name_med";
+    public static String nation = "nationality_med";
+    public static String allergy = "allergy_med";
+    public static String bloodGrp = "bloodGroup_med";
+    public static String diabetic = "diabetic_med";
+    public static String cond = "condition_med";
+    public static String insurance = "insurance_med";
+    public static String medication = "medication_med";
 
 
     //property that holds data

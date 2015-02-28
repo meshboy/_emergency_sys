@@ -15,7 +15,26 @@ public class DbHelper extends SQLiteOpenHelper
 
     //database name
 
-    private static final String database_name = "emergency.db";
+    private static final String database_name = "new_emergency.db";
+
+    private static final String create_contact = "CREATE TABLE " + contactProfile.contact_TABLE + "("
+
+            + contactProfile.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
+            + contactProfile.KEY_NAME + " TEXT, "
+            + contactProfile.KEY_PHONE + " TEXT, "
+            + contactProfile.KEY_EMAIL + " TEXT )";
+
+    private static final String create_medical ="CREATE TABLE " + med_hist.Medical_table+ "(" +
+
+            med_hist.id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            med_hist.name + " TEXT, " +
+            med_hist.nation + " TEXT, " +
+            med_hist.cond + " TEXT, " +
+            med_hist.allergy + "  TEXT, " +
+            med_hist.bloodGrp + " TEXT, " +
+            med_hist.diabetic + " TEXT, " +
+            med_hist.insurance +  " TEXT, " +
+            med_hist.medication + " TEXT )";
 
 
     public DbHelper(Context context)
@@ -28,31 +47,8 @@ public class DbHelper extends SQLiteOpenHelper
     {
         //all tables goes here
 
-        String create_contact = "CREATE TABLE " + contactProfile.contact_TABLE + "("
-
-                       + contactProfile.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
-                       + contactProfile.KEY_NAME + " TEXT, "
-                       + contactProfile.KEY_PHONE + " TEXT, "
-                       + contactProfile.KEY_EMAIL + " TEXT )";
-
-
-
-
-
-
-        String create_medHistory ="CREATE TABLE " + med_hist.Medical_table+ "(" +
-
-                         med_hist.id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                         med_hist.name + " TEXT, " +
-                         med_hist.allergy + "  TEXT, " +
-                         med_hist.bloodGrp + " TEXT, " +
-                         med_hist.diabetic + " TEXT, " +
-                         med_hist.insurance +  " TEXT, " +
-                         med_hist.medication + " TEXT )";
-
-
         db.execSQL(create_contact);
-        db.execSQL(create_medHistory);
+        db.execSQL(create_medical);
     }
 
     @Override
@@ -62,8 +58,8 @@ public class DbHelper extends SQLiteOpenHelper
         db.execSQL("DROP TABLE IF EXITS "  + contactProfile.contact_TABLE);
         db.execSQL("DROP TABLE IF EXITS " + med_hist.Medical_table);
 //
-//        //re-create table
-//        onCreate(db);
+        //re-create table
+        onCreate(db);
 
     }
 }

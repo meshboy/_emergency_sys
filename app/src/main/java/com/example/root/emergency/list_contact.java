@@ -62,8 +62,8 @@ public class list_contact extends ListActivity  implements android.view.View.OnC
 
         dataRepo repo = new dataRepo(this);
 
-        ArrayList<HashMap<String, String>> studentList =  repo.getContactList();
-        if(studentList.size()!=0) {
+        ArrayList<HashMap<String, String>> contactList =  repo.getContactList();
+        if(contactList.size()!=0) {
             ListView lv = getListView();
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -75,7 +75,7 @@ public class list_contact extends ListActivity  implements android.view.View.OnC
                     startActivity(objIndent);
                 }
             });
-            ListAdapter adapter = new SimpleAdapter( list_contact.this,studentList, R.layout.view_contacts_entry, new String[] { "id","name"}, new int[] {R.id.contact_id, R.id.contact_name});
+            ListAdapter adapter = new SimpleAdapter( list_contact.this,contactList, R.layout.view_contacts_entry, new String[] { "id","name"}, new int[] {R.id.contact_id, R.id.contact_name});
             setListAdapter(adapter);
         }else{
             Toast.makeText(this,"No Contact added!",Toast.LENGTH_SHORT).show();

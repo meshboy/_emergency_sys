@@ -77,12 +77,24 @@ ADDED from AndroidManifest.xml:24:9
 		ADDED from AndroidManifest.xml:24:66
 	android:name
 		ADDED from AndroidManifest.xml:24:19
-activity#com.example.root.emergency.police
+activity#com.example.root.emergency.edit_med_history
 ADDED from AndroidManifest.xml:25:9
 	android:label
-		ADDED from AndroidManifest.xml:25:68
+		ADDED from AndroidManifest.xml:25:78
 	android:name
 		ADDED from AndroidManifest.xml:25:19
+activity#com.example.root.emergency.police
+ADDED from AndroidManifest.xml:26:9
+	android:label
+		ADDED from AndroidManifest.xml:26:68
+	android:name
+		ADDED from AndroidManifest.xml:26:19
+activity#com.example.root.emergency.medical_history
+ADDED from AndroidManifest.xml:27:9
+	android:label
+		ADDED from AndroidManifest.xml:27:77
+	android:name
+		ADDED from AndroidManifest.xml:27:19
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5

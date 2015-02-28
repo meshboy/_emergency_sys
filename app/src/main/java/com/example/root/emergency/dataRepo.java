@@ -13,7 +13,7 @@ import java.util.HashMap;
  */
 public class dataRepo
 {
-    contactProfile myprofile;
+//    contactProfile myprofile;
 
     private DbHelper dbHelper;
 
@@ -63,11 +63,11 @@ public class dataRepo
 
         values.put(com.example.root.emergency.med_hist.allergy, med_hist.med_allergy);
         values.put(com.example.root.emergency.med_hist.bloodGrp, med_hist.med_bloodGrp);
-        values.put(com.example.root.emergency.med_hist.condtion, med_hist.med_condition);
+        values.put(com.example.root.emergency.med_hist.cond, med_hist.med_condition);
         values.put(com.example.root.emergency.med_hist.diabetic, med_hist.med_diabetic);
         values.put(com.example.root.emergency.med_hist.insurance, med_hist.med_insurance);
         values.put(com.example.root.emergency.med_hist.medication, med_hist.med_medication);
-        values.put(com.example.root.emergency.med_hist.nationality, med_hist.med_nationality);
+        values.put(com.example.root.emergency.med_hist.nation, med_hist.med_nationality);
         values.put(com.example.root.emergency.med_hist.name, med_hist.med_name);
 
         long med_id = db.insert(com.example.root.emergency.med_hist.Medical_table, null, values);
@@ -137,11 +137,11 @@ public class dataRepo
 
         values.put(com.example.root.emergency.med_hist.allergy, med_hist.med_allergy);
         values.put(com.example.root.emergency.med_hist.bloodGrp, med_hist.med_bloodGrp);
-        values.put(com.example.root.emergency.med_hist.condtion, med_hist.med_condition);
+        values.put(com.example.root.emergency.med_hist.cond, med_hist.med_condition);
         values.put(com.example.root.emergency.med_hist.diabetic, med_hist.med_diabetic);
         values.put(com.example.root.emergency.med_hist.insurance, med_hist.med_insurance);
         values.put(com.example.root.emergency.med_hist.medication, med_hist.med_medication);
-        values.put(com.example.root.emergency.med_hist.nationality, med_hist.med_nationality);
+        values.put(com.example.root.emergency.med_hist.nation, med_hist.med_nationality);
         values.put(com.example.root.emergency.med_hist.name, med_hist.med_name);
 
         db.update(com.example.root.emergency.med_hist.Medical_table, values,
@@ -218,39 +218,39 @@ public class dataRepo
 
 
 
-    public med_hist getHistoryId (int id)
+    public med_hist getHistoryId ()
     {
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
 
         String sql = "SELECT " +
-                      med_hist.name + ", " +
-                      med_hist.nationality + ", " +
+                      med_hist.name + "," +
+                      med_hist.nation + "," +
                       med_hist.allergy + "," +
-                      med_hist.bloodGrp + ", " +
-                      med_hist.diabetic + ", " +
-                      med_hist.condtion + ", " +
-                      med_hist.insurance + ", "+
-                      med_hist.medication + ", " +
-                      " FROM "  + med_hist.Medical_table +
-                      " WHERE " + med_hist.id + "=?";
+                      med_hist.bloodGrp + "," +
+                      med_hist.diabetic + "," +
+                      med_hist.cond + "," +
+                      med_hist.insurance + ","+
+                      med_hist.medication +
+                      " FROM "  + med_hist.Medical_table
+                      ;
 
 
         med_hist med = new med_hist();
 
-        Cursor cursor = db.rawQuery(sql, new String[] {String.valueOf(id)});
+        Cursor cursor = db.rawQuery(sql, /**new String[] {String.valueOf(id)}**/ null);
 
         if(cursor.moveToFirst())
         {
             do{
-                med.med_id = cursor.getInt(cursor.getColumnIndex(med_hist.id));
+               // med.med_id = cursor.getInt(cursor.getColumnIndex(med_hist.id));
                 med.med_name = cursor.getString(cursor.getColumnIndex(med_hist.name));
-                med.med_nationality =  cursor.getString(cursor.getColumnIndex(med_hist.nationality));
+                med.med_nationality =  cursor.getString(cursor.getColumnIndex(med_hist.nation));
                 med.med_allergy = cursor.getString(cursor.getColumnIndex(med_hist.allergy));
                 med.med_bloodGrp= cursor.getString(cursor.getColumnIndex(med_hist.bloodGrp));
                 med.med_diabetic = cursor.getString(cursor.getColumnIndex(med_hist.diabetic));
-                med.med_condition  = cursor.getString(cursor.getColumnIndex(med_hist.condtion));
+                med.med_condition  = cursor.getString(cursor.getColumnIndex(med_hist.cond));
                 med.med_insurance = cursor.getString(cursor.getColumnIndex(med_hist.insurance));
                 med.med_medication = cursor.getString(cursor.getColumnIndex(med_hist.medication));
 
